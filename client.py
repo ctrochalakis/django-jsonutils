@@ -2,7 +2,6 @@ import logging
 import urllib
 import urllib2
 from urlparse import urljoin
-import pdb
 import simplejson
 log = logging.getLogger(__name__)
 
@@ -44,5 +43,4 @@ class BaseClient(object):
         response = urllib2.urlopen(req)
         json_response = response.read()
         data = simplejson.loads(json_response)
-#        pdb.set_trace()
         return data
